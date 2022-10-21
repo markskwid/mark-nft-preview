@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+:root {
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --VerydarkblueMainBG: hsl(217, 54%, 11%);
+  --VerydarkblueCardBG: hsl(216, 50%, 16%);
+  --VerydarkblueLine: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/** typography **/
+
+body {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 1.2rem;
+  color: var(--White);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+h1:hover,
+.name-text:hover {
+  color: var(--Cyan);
+}
+
+p {
+  font-size: 0.9rem;
+  color: var(--Softblue);
+}
+
+span {
+  font-size: 0.9rem;
+}
+
+.eth-text {
+  vertical-align: top;
+  font-weight: bold;
+  color: var(--Cyan);
+  margin-right: 25%;
+}
+
+.day-text {
+  vertical-align: top;
+  color: var(--Softblue);
+}
+
+.name-text {
+  color: var(--White);
+  cursor: pointer;
+}
+
+/** layout **/
+
+html {
+  background-color: var(--VerydarkblueMainBG);
+}
+
+body {
+  padding: 3em;
+}
+
+hr {
+  background-color: var(--VerydarkblueLine);
+  height: 0.5px;
+  border: 0;
+  margin-top: 0.6em;
+}
+
+body main {
+  width: 20%;
+  height: auto;
+  background: var(--VerydarkblueCardBG);
+  margin: auto;
+  padding: 0.9em;
+  border-radius: 10px;
+  box-shadow: 0px 30px 0px 15px #0c1729, 0px 25px 0px 35px rgba(12, 15, 44, 0.1);
+}
+
+main .image-container {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+main .image-container img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 5px;
+  height: 100%;
+}
+
+main .image-container .visibility-container {
+  width: 100%;
+  background: rgb(0%, 100%, 97%, 0.5);
+  border-radius: 5px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  justify-content: center;
+  height: 98%;
+  top: 0;
+  transition: 0.3s ease;
+}
+
+main .image-container:hover .visibility-container {
+  opacity: 1;
+}
+
+main .profile-container {
+  display: flex;
+  align-content: center;
+  padding: 0.1em;
+}
+
+main .profile-container .profile-picture {
+  max-width: 12%;
+  border: 0.1px solid white;
+  border-radius: 999px;
+  margin-right: 0.5em;
+  align-self: center;
+}
+
+/** for mobile **/
+@media screen and (max-width: 375px) {
+  body {
+    padding: 3em 1.5em;
+  }
+
+  body main {
+    width: 90%;
+    height: auto;
+    background: var(--VerydarkblueCardBG);
+    margin: auto;
+    padding: 0.9em;
+    border-radius: 10px;
+    box-shadow: 0px 30px 0px 15px #0c1729,
+      0px 25px 0px 35px rgba(12, 15, 44, 0.1);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+}

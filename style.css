@@ -47,7 +47,7 @@ span {
   vertical-align: top;
   font-weight: bold;
   color: var(--Cyan);
-  margin-right: 25%;
+  margin-right: 35%;
 }
 
 .day-text {
@@ -67,7 +67,10 @@ html {
 }
 
 body {
-  padding: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 hr {
@@ -81,7 +84,6 @@ body main {
   width: 20%;
   height: auto;
   background: var(--VerydarkblueCardBG);
-  margin: auto;
   padding: 0.9em;
   border-radius: 10px;
   box-shadow: 0px 30px 0px 15px #0c1729, 0px 25px 0px 35px rgba(12, 15, 44, 0.1);
@@ -133,13 +135,19 @@ main .profile-container .profile-picture {
 }
 
 /** for mobile **/
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 600px) {
   body {
-    padding: 3em 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1em;
   }
 
   body main {
     width: 90%;
+    max-width: 90%;
+    min-width: 90%;
     height: auto;
     background: var(--VerydarkblueCardBG);
     margin: auto;
@@ -148,7 +156,4 @@ main .profile-container .profile-picture {
     box-shadow: 0px 30px 0px 15px #0c1729,
       0px 25px 0px 35px rgba(12, 15, 44, 0.1);
   }
-}
-
-@media screen and (max-width: 1440px) {
 }
